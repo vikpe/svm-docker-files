@@ -1,4 +1,6 @@
 # svm-docker-files
 > Docker files for SvenskaMagic.
 
-https://hub.docker.com/u/svenskamagic/
+* PHP: https://hub.docker.com/r/svenskamagic/php/
+* NGINX: https://hub.docker.com/r/svenskamagic/nginx/
+* MariaDB: https://hub.docker.com/r/svenskamagic/mariadb/
