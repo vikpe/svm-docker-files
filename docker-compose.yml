@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+    web:
+        image: svenskamagic/nginx:1.13
+        ports:
+            - "8080:80"
+        volumes:
+            - ./src:/src
+        networks:
+            - docker-network
+    php:
+        image: svenskamagic/php:7.2-fpm
+        volumes:
+            - ./src:/src
+        networks:
+            - docker-network
+    db:
+        image: svenskamagic/mariadb:10.2
+        restart: always
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        networks:
+            - docker-network
+
+networks:
+    docker-network:
+        driver: bridge
